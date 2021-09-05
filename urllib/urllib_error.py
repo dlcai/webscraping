@@ -5,9 +5,12 @@ import socket
 try:
     response = urlopen('https://cuiqingcai.com/index.htm')
 except HTTPError as e:
-    print(e.reason, e.code, e.headers, sep='\n')
+    #print(e.reason, e.code, e.headers, sep='\n')
+    print(repr(e))
 except URLError as e:
-    print(e.reason)
+    #print(e.reason)
+    print('URLERROR......') 
+    print(repr(e))
 else:
     print('Request sucessfully')
 
