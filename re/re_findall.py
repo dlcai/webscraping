@@ -31,4 +31,5 @@ results = re.findall(pattern2, html, re.S)
 print(f'{len(results)} matches')
 print(results)
 for s in results:
-    print(s.replace('\n', r'\n'))
+    print(repr(s))
+    #print(s.replace('\n', r'\n'))
